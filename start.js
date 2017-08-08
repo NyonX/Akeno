@@ -34,6 +34,7 @@ fs.readdir("./events/", (err, files) => {
 client.on("message", msg => {
 	if (msg.author.bot) return;
 	if(!msg.content.startsWith(prefix)) return;
+	console.log(msg);
 
 
 var request = app.textRequest(`${msg.content.slice(1)}`);
