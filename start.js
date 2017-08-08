@@ -54,11 +54,11 @@ request.end()
        ai.textRequest(`${msg.content.slice(1)}`, {sessionId: `${msg.author.id}`});
        request.on('response', function(response) {
        let responseText = response.result.fulfillment.speech;
-       if (response.result.action !== ''){
+       /*if (response.result.action !== ''){
        	let action = response.result.action;
        	let actionSubject = response.result.parameters.Username;
        	return;
-       }
+       }*/
        msg.reply(`${responseText}`);
     });
     
