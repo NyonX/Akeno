@@ -18,16 +18,6 @@ var owner = process.env.owner;
 var ai = apiai(process.env.ai);
 var prefix = process.env.prefix;
 
-// Load Events
-fs.readdir("./events/", (err, files) => {
-  if (err) return console.error(err);
-  files.forEach(file => {
-    let eventFunction = require(`./events/${file}`);
-    let eventName = file.split(".")[0];
-    client.on(eventName, (...args) => eventFunction.run(client, ...args));
-  });
-});
-
 // --------------------
 //---AI Integeration---
 //---------------------
