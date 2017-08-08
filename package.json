@@ -1,7 +1,6 @@
 {
-  "name": "AkenoV4",
+  "name": "akenov4",
   "version": "1.0.0",
-  "description": "",
   "main": "start.js",
   "dependencies": {
     "apiai": "^4.0.3",
@@ -23,5 +22,6 @@
   "bugs": {
     "url": "https://github.com/NyonX/Akeno/issues"
   },
-  "homepage": "https://github.com/NyonX/Akeno#readme"
+  "homepage": "https://github.com/NyonX/Akeno#readme",
+  "description": ""
 }
