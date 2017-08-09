@@ -58,7 +58,7 @@ request.end()
        	msg.reply(`${responseText}`);
        	if (response.result.action !== '') {
        		let action = response.result.action
-       		if (response.result.parameters !'') {
+       		if (response.result.parameters !== '') {
        			let parameter = response.result.parameter
        			try {
        				let cmd = require(`./commands/${cmd}`);
