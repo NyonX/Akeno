@@ -61,7 +61,7 @@ request.end()
        		if (response.result.parameters !== '') {
        			let parameter = response.result.parameter
        			try {
-       				let cmd = require(`./commands/${cmd}`);
+       				let cmd = require(`./commands/${action}`);
        				cmd.run(client, action, parameter)
        			} catch (err) {
        				console.error(err);
