@@ -58,14 +58,16 @@ request.end()
        	msg.reply(`${responseText}`);
        	if (response.result.action !== '') {
        		let action = response.result.action
+       		console.log(response.result.action);
        		if (response.result.parameters !== '') {
-       			let parameter = response.result.parameter
+       			let sub = response.result.parameters.Username
        			try {
-       				let cmd = require(`./commands/${action}`);
-       				cmd.run(client, action, parameter)
+       				let cmd = require(`./commands/${action}.js`);
+       				cmd.run(client, msg, sub);
        			} catch (err) {
        				console.error(err);
        			}
+
        		}
        	}
        }       
@@ -76,8 +78,6 @@ request.end()
 //Logs more errors
 request.on('error', function(error) {
     console.log(error);
-
-
 });
 });
 
